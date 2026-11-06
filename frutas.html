@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas do Diabo — Akuma no Mi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/estilos.css">
+    <link rel="shortcut icon" href="imagens/one piece.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header style="padding: 0px; margin: 0px;" class="cabeca">
+        <h1>Akuma no Mi — Frutas do Diabo</h1>
+        <p class="pt-3">Descubra os frutos misteriosos que concedem poderes extraordinários!</p>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="tripulacao.html">Tripulação</a>
+        <a href="ilhas.html">Ilhas</a>
+        <a class="menuAtivo" href="frutas.html" aria-current="page">Frutas</a>
+        <a href="piratas.html">Piratas</a>
+        <a href="marinheiros.html">Marinheiros</a>
+        <a href="shichibukais.html">Shichibukais</a>
+        <a href="yonkous.html">Yonkous</a>
+    </nav>
+
+    <main class="container my-4">
+
+        <h2 class="text-center mb-4">Categorias Principais</h2>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Paramecia</h3>
+                        <p class="card-text">Concede habilidades físicas sobre-humanas ou permite alterar o corpo e o ambiente. Exemplo: Gomu Gomu no Mi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Zoan</h3>
+                        <p class="card-text">Permite transformar-se em um animal ou em uma forma híbrida. Exemplo: Uo Uo no Mi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Logia</h3>
+                        <p class="card-text">Permite transformar-se, criar e controlar um elemento da natureza. Exemplo: Mera Mera no Mi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-light p-4 rounded border my-5">
+            <h2 class="text-center mb-4">Cadastrar Nova Akuma no Mi</h2>
+
+            <form id="formFruta">
+                <div class="mb-3">
+                    <label for="nomeFruta" class="form-label">Nome da Fruta:</label>
+                    <input type="text" id="nomeFruta" class="form-control"
+                           placeholder="Ex: Mera Mera no Mi" minlength="3" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emailUsuario" class="form-label">E-mail do Explorador:</label>
+                    <input type="email" id="emailUsuario" class="form-control"
+                           placeholder="seu-email@exemplo.com" required
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tipoFruta" class="form-label">Categoria:</label>
+                    <select id="tipoFruta" class="form-select" required>
+                        <option value="">Selecione uma categoria...</option>
+                        <option value="Paramecia">Paramecia</option>
+                        <option value="Zoan">Zoan</option>
+                        <option value="Logia">Logia</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="descricaoFruta" class="form-label">Poder / Descrição:</label>
+                    <textarea id="descricaoFruta" class="form-control" rows="3"
+                              placeholder="Descreva o poder da fruta..."
+                              minlength="10" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Cadastrar Fruta
+                </button>
+            </form>
+        </section>
+
+        <section>
+            <h2 class="text-center mb-4">Frutas Registradas pelos Exploradores</h2>
+            <div id="listaCadastrados" class="row g-4"></div>
+        </section>
+
+    </main>
+
+    <footer>Enciclopédia de Akuma no Mi de One Piece.</footer>
+
+    <script src="Js/scripts.js"></script>
+</body>
+</html>
+
+
+    
